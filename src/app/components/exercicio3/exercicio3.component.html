@@ -1,0 +1,21 @@
+<h3>Exercicio 3: Condicional com IF e ELSE</h3>
+
+<div>
+  <button (click)="aumentarIdade()">+</button>
+  <input
+    type="number"
+    [(ngModel)]="idade"
+    (change)="verificarIdade()"
+    style="width: 60px; text-align: center;"
+    />
+  <button (click)="diminuirIdade()">-</button>
+</div>
+
+<p>
+  @if (idade >= 18) {
+    <span>Acesso permitido</span>
+  }
+  @else {
+    <span>Acesso negado</span>
+  }
+</p>

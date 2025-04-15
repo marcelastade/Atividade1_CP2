@@ -1,0 +1,30 @@
+<h3>Exercicio 5: SWITCH com múltiplos cases</h3>
+
+<h3>Status do Pedido</h3>
+
+<!-- Dropdown para alterar o status -->
+<select [(ngModel)]="status">
+  <option value=""></option>
+  <option value="pendente">Pendente</option>
+  <option value="enviado">Enviado</option>
+  <option value="entregue">Entregue</option>
+  <option value="outro">Outro</option>
+</select>
+
+<!-- Controle de exibição baseado no status com @switch -->
+<p>
+  @switch (status) {
+    @case ("pendente") {
+      <span>Aguardando confirmação</span>
+    }
+    @case ("enviado") {
+      <span>Pedido a caminho</span>
+    }
+    @case ("entregue") {
+      <span>Pedido entregue</span>
+    }
+    @default {
+      <span>Status desconhecido</span>
+    }
+  }
+</p>

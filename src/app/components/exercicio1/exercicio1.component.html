@@ -1,0 +1,50 @@
+
+<h3>Exercicio 1: Mês com SWITCH</h3>
+
+<h4>Digite um número de 1 a 12</h4>
+<input
+  type="number"
+  [(ngModel)]="mesSelecionado"
+/>
+
+@switch (mesSelecionado) {
+  @case (1) {
+    <div>Janeiro</div>
+  }
+  @case (2) {
+    <div>Fevereiro</div>
+  }
+  @case (3) {
+    <div>Março</div>
+  }
+  @case (4) {
+    <div>Abril</div>
+  }
+  @case (5) {
+    <div>Maio</div>
+  }
+  @case (6) {
+    <div>Junho</div>
+  }
+  @case (7) {
+    <div>Julho</div>
+  }
+  @case (8) {
+    <div>Agosto</div>
+  }
+  @case (9) {
+    <div>Setembro</div>
+  }
+  @case (10) {
+    <div>Outubro</div>
+  }
+  @case (11) {
+    <div>Novembro</div>
+  }
+  @case (12) {
+    <div>Dezembro</div>
+  }
+  @default {
+    <div>Mês inválido! Por favor, insira um número entre 1 e 12.</div>
+  }
+}

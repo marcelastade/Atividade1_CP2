@@ -1,0 +1,16 @@
+<h3>Exercicio 4: Lista com ações dinâmicas</h3>
+
+<h3>Lista de Tarefas</h3>
+
+<!-- Iteração sobre as tarefas usando @for -->
+@for (tarefa of tarefas; track $index) {
+  <div style="display: flex; align-items: center; gap: 10px;">
+    <span>{{ $index + 1 }}. {{ tarefa }}</span>
+    <button (click)="removerTarefa($index)">Remover</button>
+  </div>
+}
+
+<!-- Mensagem para lista vazia -->
+@empty {
+  <p>Nenhuma tarefa pendente</p>
+}
