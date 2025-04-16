@@ -1,0 +1,36 @@
+<input type="number" placeholder="Valor 1" [(ngModel)]="valor1" />
+<br>
+<input type="number" placeholder="Valor 2" [(ngModel)]="valor2" />
+<br>
+<select [(ngModel)]="operacao">
+  <option value=""></option>
+  <option value="soma">Soma</option>
+  <option value="subtracao">Subtração</option>
+  <option value="divisao">Divisão</option>
+  <option value="multiplicacao">Multiplicação</option>
+</select>
+
+<p>
+  @switch (operacao) {
+    @case ("soma") {
+      <span>{{valor1 + valor2}}</span>
+    }
+    @case ("subtracao") {
+      <span>{{valor1 - valor2}}</span>
+    }
+    @case ("multiplicacao") { 
+      <span>{{valor1 * valor2}}</span>
+    }
+    @case ("divisao") {
+      @if(valor2 == 0){
+        <span>Erro: divisão por 0!</span>
+      }
+      @else{
+      <span>{{valor1 / valor2}}</span>
+      }
+    }
+    @default{
+      <span>Digite um valor</span>
+    }
+  }
+</p>

@@ -1,0 +1,11 @@
+@for (produto of produtos; track $index) {
+  @if(produto.promocao == true){
+  <div class="promocao">{{ $index + 1 }}. {{ produto.nome }}</div>
+}
+@else{
+  <div>{{ $index + 1 }}. {{ produto.nome }}</div>
+}
+}
+@empty {
+  <div>Nenhum produto cadastrado</div>
+}

@@ -6,8 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './exercicio7.component.html',
   styleUrl: './exercicio7.component.css'
 })
-
 export class Exercicio7Component {
-
-  valor: number | string = 1; // Valor inicial
+  valor: number | string = 1;
 }
